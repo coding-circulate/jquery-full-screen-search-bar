@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: black;
+}
+
+.container .search-content {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, black, #d4425b);
+    text-align: center;
+    transition: .9s;
+    transition-delay: .9s;
+    overflow: hidden;
+}
+
+.container .search-content span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    background: grey;
+    z-index: 3;
+}
+
+.container .search-content span .fas {
+    position: relative;
+    font-size: 45px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    transition: .9s;
+    transition-delay: 0s;
+}
+
+.container .search-content input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid #fff;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    padding: 10px 0;
+    display: inline-block;
+    width: 777px;
+}
+
+.container .search-content input::placeholder {
+    color: #fff;
+}
+
+.container .search-content.active input {
+    display: none;
+}
+
+.container .search-content.active {
+    top: 20%;
+    left: 94%;
+    width: 80px;
+    height: 80px;
+    transition-delay: 0s;
+}
+
+.container .search-content.active span .fas {
+    transform: translateY(-100%);
+}
